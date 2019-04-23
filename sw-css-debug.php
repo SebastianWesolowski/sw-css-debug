@@ -21,7 +21,7 @@
 add_action( 'wp_enqueue_scripts', function () {
 	if ( env( 'WP_ENV' ) === 'development' ) {
 		wp_enqueue_style( 'sw-css-debug/style', plugins_url( 'assets/css/sw-css-debug-main.css', __FILE__ ) );
-		wp_enqueue_script( 'sw-css-debug/script', plugins_url( 'assets/scripts/sw-css-debug-main.js' ), __FILE__, ['jquery'] );
+		wp_enqueue_script( 'sw-css-debug/script', plugins_url( 'assets/scripts/sw-css-debug-main.js', __FILE__ ) );
 		do_action( 'sw_css_debug_init' );
 	}
 }, 100 );
@@ -34,22 +34,18 @@ add_filter( 'body_class', 'add_classes_mode' );
  * Create GUI element for css debuger
  */
 function draw_gui() {
-
-	$mode    = ( env( ' WP_ENV ' ) );
-	$version = ( env( ' VERSION ' ) );
-
 	?>
 		<div class="version">
 			<div class="line">
 					<div class="key">📄 Version: </div>
 					<div class="value">
-						<?php	esc_html( $version ); ?>
+						<?php echo ( env( 'VERSION' ) ); ?>
 					</div>
 			</div>
 			<div class="line">
 					<div class="key">⚙️ Mode: </div>
 					<div class="value">
-						<?php	esc_html( $mode ); ?>
+						<?php echo ( env( 'WP_ENV' ) ); ?>
 					</div>
 			</div>
 		</div>

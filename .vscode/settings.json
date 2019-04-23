@@ -46,7 +46,7 @@
   "phpfmt.exclude": ["ReindentComments", "StripNewlineWithinClassBody"],
 
   "files.exclude": {
-    "**/.git": true,
+    "**/.git": false,
     "**/.cache-loader": true,
     "**/node_modules": true,
     "**/vendor": true,

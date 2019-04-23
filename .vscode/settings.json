@@ -1,0 +1,62 @@
+{
+  "editor.formatOnSaveTimeout": 750,
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorStyle": "block",
+  "editor.detectIndentation": true,
+  "editor.formatOnPaste": true,
+
+  "[php]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "kokororin.vscode-phpfmt"
+  },
+
+  "files.eol": "\r\n",
+  "phpcs.enable": true,
+  "phpcs.standard": "Infinum,WordPress-Extra",
+  "phpfmt.indent_with_space": 0,
+  "phpfmt.psr2": false,
+  "phpfmt.cakephp": true,
+  "phpfmt.passes": [
+    "DoubleToSingleQuote",
+    "GeneratePHPDoc",
+    "SpaceAroundParentheses",
+    "SpaceBetweenMethods",
+    "SpaceAfterExclamationMark",
+    "AddMissingParentheses",
+    "AlignDoubleSlashComments",
+    "AlignEquals",
+    "ShortArray",
+    "AlignGroupDoubleArrow",
+    "AutoSemicolon",
+    "MergeNamespaceWithOpenTag",
+    "NewLineBeforeReturn",
+    "ReplaceBooleanAndOr",
+    "SortUseNameSpace",
+    "TrimSpaceBeforeSemicolon",
+    "PSR2KeywordsLowerCase",
+    "PSR2LnAfterNamespace",
+    "PSR2ModifierVisibilityStaticOrder",
+    "PSR2SingleEmptyLineAndStripClosingTag",
+    "ReindentSwitchBlocks"
+  ],
+  "phpfmt.exclude": ["ReindentComments", "StripNewlineWithinClassBody"],
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/.cache-loader": true,
+    "**/node_modules": true,
+    "**/vendor": true,
+    "**/composer.lock": true,
+    "**/LICENSE.md": true,
+    "**/phpcs.xml": true,
+    "**/yarn.lock": true,
+    "**/dist": true,
+    "**/.travis.yml": true,
+    "**/bitbucket-pipelines.yml": true,
+    "**/wp-cli.yml": true
+  }
+}

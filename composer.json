@@ -1,0 +1,61 @@
+{
+  "name": "sebastianwesolowski/sw-css-debug",
+  "type": "wordpress-muplugin",
+  "license": "MIT",
+  "description": "Small debuger for css",
+  "homepage": "https://github.com/sebastianwesolowski/sw-css-debug",
+  "authors": [
+    {
+      "name": "Sebastian Wesołowski",
+      "email": "sebastian@wesolowski.dev",
+      "homepage": "https://wesolowski.dev"
+    },
+    {
+      "name": "Sebastian Wesołowski",
+      "email": "kontakt@warszatkodu.pl",
+      "homepage": "https://warsztatkodu.pl"
+    }
+  ],
+  "keywords": [
+    "bedrock",
+    "composer",
+    "roots",
+    "wordpress",
+    "wp",
+    "wp-config",
+    "plugin",
+    "gutenberg"
+  ],
+  "support": {
+    "issues": "https://github.com/sebastianwesolowski/sw-css-debug/issues"
+  },
+  "require": {
+    "php": "^7.1.3"
+  },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+    "infinum/coding-standards-wp": "^0.2.8",
+    "phpcompatibility/phpcompatibility-wp": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Inc\\": "./inc"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "\"vendor/bin/phpcs\" --config-set installed_paths vendor/infinum/coding-standards-wp,vendor/phpcompatibility/php-compatibility",
+      "\"vendor/bin/phpcs\" -i"
+    ],
+    "post-update-cmd": [
+      "\"vendor/bin/phpcs\" --config-set installed_paths vendor/infinum/coding-standards-wp,vendor/phpcompatibility/php-compatibility",
+      "\"vendor/bin/phpcs\" -i"
+    ]
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

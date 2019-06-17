@@ -9,7 +9,7 @@
  * Plugin Name: SW CSS Debuger
  * Plugin URI:  https://github.com/sebastianwesolowski/sw-css-debug
  * Description: Small debuger for css
- * Version:     1.0.1
+ * Version:     1.0.2
  * Author:      Sebastian Wesołowski
  * Author URI:  http://warsztatkodu.pl, http://wesolowski.dev
  * Text Domain: sw-css-debug
